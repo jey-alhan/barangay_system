@@ -1,0 +1,118 @@
+/* =====================================
+   DARK TABLE DESIGN
+===================================== */
+
+.table-responsive {
+    background: transparent;
+}
+
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #e2e8f0;
+    --bs-table-border-color: rgba(255,255,255,0.10);
+    --bs-table-hover-bg: rgba(255,255,255,0.08);
+    --bs-table-hover-color: #ffffff;
+
+    width: 100%;
+    margin-bottom: 0;
+
+    color: #e2e8f0 !important;
+    background-color: transparent !important;
+}
+
+.table thead,
+.table thead tr,
+.table thead th {
+    background: rgba(0,0,0,0.25) !important;
+    color: #ffffff !important;
+}
+
+.table tbody,
+.table tbody tr {
+    background-color: transparent !important;
+}
+
+.table tbody td {
+    background-color: transparent !important;
+    color: #e2e8f0 !important;
+    border-color: rgba(255,255,255,0.10) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(255,255,255,0.04) !important;
+    color: #e2e8f0 !important;
+}
+
+.table tbody tr:hover > * {
+    background-color: rgba(255,255,255,0.08) !important;
+    color: #ffffff !important;
+}
+
+/* =====================================
+   MOBILE / RESPONSIVE TABLE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 10px;
+    }
+
+    .table {
+        min-width: 700px;
+        font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px 12px !important;
+        white-space: nowrap;
+    }
+
+    .table thead th {
+        font-size: 12px;
+    }
+
+    /* Smaller buttons inside table */
+    .table .btn {
+        font-size: 12px;
+        padding: 5px 8px;
+        margin-bottom: 3px;
+    }
+}
+
+
+/* =====================================
+   SMALL MOBILE DEVICES
+===================================== */
+
+@media (max-width: 480px) {
+
+    .table {
+        min-width: 650px;
+        font-size: 12px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px 10px !important;
+    }
+
+    .table thead th {
+        font-size: 11px;
+    }
+
+    .table .btn {
+        font-size: 11px;
+        padding: 4px 7px;
+    }
+
+    /* Smooth horizontal scrolling */
+    .table-responsive {
+        border-radius: 8px;
+        scrollbar-width: thin;
+    }
+}
